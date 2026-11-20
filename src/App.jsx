@@ -3,7 +3,9 @@ import { useState } from "react";
 export default function App() {
   const [bill, setBill] = useState("");
   const [tipPercent, setTipPercent] = useState(10);
-
+const billAmount = Number(bill) || 0;
+const tip = billAmount * (tipPercent / 100);
+const total = billAmount + tip;
   return (
     <div className="app">
       <h1>Tip Calculator</h1>
@@ -31,8 +33,8 @@ export default function App() {
         </select>
       </label>
 
-      <p>You typed: {bill}</p>
-      <p>Tip percent is: {tipPercent}</p>
+ <p>Tip: {tip.toFixed(2)}</p>
+<p>Total: {total.toFixed(2)}</p>
     </div>
   );
 }
