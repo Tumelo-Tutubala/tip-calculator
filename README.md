@@ -1,19 +1,51 @@
-# React + Vite
+# Tip Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple web app that works out how much tip to leave and how to split the bill between friends.
 
-Currently, two official plugins are available:
+**Live demo:** TODO (add the link once it's deployed)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Enter a bill amount
+- Choose a tip percentage (or type a custom one)
+- Split the total between any number of people
+- See the tip and the amount each person pays update instantly
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Built with
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
+- JavaScript, HTML and CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run it on your computer
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/YOUR-USERNAME/tip-calculator.git
+   cd tip-calculator
+   ```
+2. Install the dependencies:
+   ```
+   npm install
+   ```
+3. Start the app:
+   ```
+   npm run dev
+   ```
+4. Open the link shown in the terminal (usually http://localhost:5173).
+
+## What I learned
+
+- TODO: e.g. how to pass data between components with props
+- TODO: e.g. how state makes the screen update
+- TODO: e.g. how to handle form input in React
+
+## Future improvements
+
+- TODO: e.g. add tests
+- TODO: e.g. round the total up to a whole number
+
+## Author
+
+Tumelo Tutubala - [GitHub](https://github.com/Tumelo-Tutubala)
