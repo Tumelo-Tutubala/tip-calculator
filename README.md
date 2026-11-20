@@ -2,7 +2,7 @@
 
 A simple web app that works out how much tip to leave and how to split the bill between friends.
 
-**Live demo:** TODO (add the link once it's deployed)
+**Live demo:** https://tip-calculator-alphatech.vercel.app/
 
 
 ## Features
