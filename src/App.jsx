@@ -2,6 +2,7 @@ import { useState } from "react";
 import NumberField from "./components/NumberField";
 import Results from "./components/Results";
 import { TipSelect } from "./components/TipSelect";
+import  "./App.css"
 
 export default function App() {
   const [bill, setBill] = useState("");
