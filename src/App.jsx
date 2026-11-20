@@ -1,11 +1,13 @@
 import { useState } from "react";
+import NumberField from "./components/NumberField";
+import Results from "./components/Results";
+import { TipSelect } from "./components/TipSelect";
 
 export default function App() {
   const [bill, setBill] = useState("");
-  const [tipPercent, setTipPercent] = useState(10);
+  const [tipPercent, setTipPercent] = useState(5);
   const [people, setPeople] = useState(1);
 
-//calculations
   const billAmount = Number(bill) || 0;
   const tip = billAmount * (tipPercent / 100);
   const total = billAmount + tip;
@@ -16,42 +18,31 @@ export default function App() {
     <div className="app">
       <h1>Tip Calculator</h1>
 
-      <label>
-        Bill amount:
-        <input
-          type="number"
-          value={bill}
-          onChange={(e) => setBill(e.target.value)}
-          placeholder="0.00"
-        />
-      </label>
+      <NumberField
+        label="Bill amount:"
+        value={bill}
+        onChange={setBill}
+        placeholder="0.00"
+      />
+      <TipSelect
+        label="Tip:"
+        value={tipPercent}
+        onChange={setTipPercent}
+      />
+     
+      <NumberField
+        label="People:"
+        value={people}
+        onChange={setPeople}
+        min="1"
+      />
 
-      <label>
-  People:
-  <input
-    type="number"
-    min="1"
-    value={people}
-    onChange={(e) => setPeople(e.target.value)}
-  />
-</label>
-
-      <label>
-        Tip:
-        <select
-          value={tipPercent}
-          onChange={(e) => setTipPercent(Number(e.target.value))}
-        >
-          <option value={5}>5%</option>
-          <option value={10}>10%</option>
-          <option value={15}>15%</option>
-          <option value={20}>20%</option>
-        </select>
-      </label>
-
- <p>Tip: {tip.toFixed(2)}</p>
-<p>Total: {total.toFixed(2)}</p>
-<p>Each person pays: {perPerson.toFixed(2)}</p>
+      <Results
+        tip={tip}
+        total={total}
+        perPerson={perPerson}
+        people={peopleCount}
+      />
     </div>
   );
 }
